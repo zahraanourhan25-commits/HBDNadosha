@@ -1,0 +1,2044 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --pink: #d85f82;
+  --pink2: #f2b5c7;
+  --paper: #fffaf8;
+  --ink: #713747;
+  --muted: #a9828d;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fffaf8;
+  color: var(--ink);
+  font-family: Montserrat, sans-serif;
+  overflow-x: hidden;
+}
+
+button {
+  font: inherit;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.screen {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: radial-gradient(circle, #fffefd 0%, #fff7f7 62%, #f8e5ea 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.lock-inner {
+  width: min(92%, 420px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.key-circle,
+.mini-key {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #fce8ee;
+  color: var(--pink);
+  font-size: 26px;
+  box-shadow: 0 8px 25px #d85f8220;
+}
+
+.lock-inner h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 38px;
+  font-weight: 500;
+  margin-top: 18px;
+  color: #9a5367;
+}
+
+.for-name {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #b9909a;
+  margin-top: 2px;
+}
+
+.for-name span {
+  font-weight: 600;
+}
+
+.pin-card {
+  margin-top: 28px;
+  width: 290px;
+  min-height: 370px;
+  padding: 28px 30px 25px;
+  background: #fffdfc;
+  border: 1px solid #f6e6e8;
+  border-radius: 9px;
+  box-shadow: 0 22px 55px #9e506015;
+}
+
+.pin-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.pin-boxes span {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #f1dfe3;
+  background: #fff9fa;
+  border-radius: 6px;
+  position: relative;
+}
+
+.pin-boxes span.filled:after {
+  content: "♥";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: var(--pink);
+}
+
+.pin-card p {
+  font-size: 8px;
+  letter-spacing: 1px;
+  color: #b68e98;
+  margin-bottom: 22px;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7px;
+}
+
+.keypad button {
+  height: 54px;
+  border: 0;
+  background: transparent;
+  color: #8c6973;
+  cursor: pointer;
+  font-size: 14px;
+  transition: .2s;
+}
+
+.keypad button:hover {
+  background: #fff1f4;
+  border-radius: 8px;
+  color: var(--pink);
+}
+
+.keypad .del {
+  font-size: 9px;
+  color: #c58b99;
+}
+
+.pin-error {
+  height: 15px;
+  margin-top: 8px;
+  font-size: 9px;
+  color: #d85f82;
+  opacity: 0;
+  transition: .3s;
+}
+
+.pin-error.show {
+  opacity: 1;
+}
+
+.simple-screen {
+  flex-direction: column;
+}
+
+.simple-screen h2 {
+  font: 500 31px "Cormorant Garamond", serif;
+  color: #a25b70;
+  margin-top: 18px;
+}
+
+.sub {
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: #c29aa4;
+  margin-top: 2px;
+}
+
+.welcome-card {
+  width: 250px;
+  height: 220px;
+  margin-top: 22px;
+  border: 1px solid #f4e4e7;
+  border-radius: 8px;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  box-shadow: 0 18px 45px #9e506012;
+}
+
+.heart-badge {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #f9cad7;
+  color: var(--pink);
+  font-size: 22px;
+}
+
+.welcome-card p {
+  font: 18px "Cormorant Garamond", serif;
+  color: #a46a78;
+  margin-top: 16px;
+}
+
+.transition-screen {
+  background: #fffdfa;
+}
+
+.arabic-line {
+  font-family: Georgia, serif;
+  font-size: 38px;
+  color: #bd5270;
+  direction: rtl;
+}
+
+.tiny-heart {
+  color: var(--pink);
+  font-size: 13px;
+}
+
+.transition-screen .tiny-heart {
+  margin-top: 12px;
+}
+
+#mainSite {
+  background: #fffaf8;
+}
+
+.story-page {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 7%;
+  overflow: hidden;
+}
+
+.birthday-hero {
+  background: radial-gradient(circle, #fffefd, #fff7f8 70%);
+}
+
+.hero-card {
+  background: #fffdfd;
+  border: 1px solid #f6e6e9;
+  border-radius: 12px;
+  padding: 22px 45px;
+  box-shadow: 0 15px 35px #8e445012;
+}
+
+.hero-card h1,
+.final-card h2 {
+  font: 500 clamp(42px, 7vw, 70px) / .88 "Cormorant Garamond", serif;
+  color: #a04d66;
+  text-align: center;
+}
+
+.hero-card span,
+.final-card span {
+  font-weight: 500;
+}
+
+.scroll-label {
+  margin-top: 15px;
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: #b98794;
+}
+
+.dot-heart {
+  width: 170px;
+  height: 130px;
+  margin-top: 22px;
+  background-image: radial-gradient(#d98aa0 1px, transparent 1px);
+  background-size: 13px 13px;
+  clip-path: polygon(
+    50% 92%,
+    43% 86%,
+    25% 69%,
+    11% 52%,
+    5% 34%,
+    9% 18%,
+    22% 10%,
+    37% 13%,
+    50% 27%,
+    63% 13%,
+    78% 10%,
+    91% 18%,
+    95% 34%,
+    89% 52%,
+    75% 69%,
+    57% 86%
+  );
+  opacity: .7;
+}
+
+.our-story {
+  align-items: flex-start;
+  padding-left: 11%;
+  background: #fffaf8;
+}
+
+.section-copy {
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+
+.section-copy h2,
+.section-title h2 {
+  font: 500 clamp(48px, 8vw, 76px) "Cormorant Garamond", serif;
+  color: #b0516d;
+}
+
+.section-copy p {
+  font-size: 11px;
+  line-height: 1.6;
+  color: #b28d96;
+  max-width: 330px;
+}
+
+.story-grid {
+  width: min(950px, 100%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  align-items: center;
+}
+
+.photo-frame {
+ width: 100;
+  max-width: 300;
+  background: #fff;
+  border: 1px solid #f2e0e4;
+  box-shadow: 0 20px 50px #7b41500d;
+  transform: rotate(-2deg);
+  
+}
+
+.photo-placeholder,
+.final-photo {
+  aspect-ratio: 1 / 1.08;
+  background: linear-gradient(135deg, #f9d8e1, #fff, #efb8c8);
+  display: grid;
+  place-items: center;
+  color: #c58b9b;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.story-note {
+  background: #fff;
+  border: 1px solid #f3e0e4;
+  padding: 40px;
+  box-shadow: 0 18px 45px #8e445010;
+}
+
+.story-note h3 {
+  font: 500 37px / 1.05 "Cormorant Garamond", serif;
+  color: #814154;
+  margin: 12px 0;
+}
+
+.story-note p {
+  font-size: 12px;
+  line-height: 1.9;
+  color: #a27b85;
+}
+
+.love-page {
+  background: #fff8fa;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+ /* =========================
+   SCRATCH CARDS
+========================= */
+
+.love-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  width: min(900px, 100%);
+}
+
+.love-card {
+  min-height: 220px;
+  background: #f7b8c9;
+  border: 1px solid #ed9fb5;
+  color: #8b3f57;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 15px 35px #9e506014;
+  transition: .35s;
+}
+
+.love-card:hover {
+  transform: translateY(-7px);
+}
+
+.scratch-message {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: #fff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
+  text-align: center;
+}
+
+.scratch-message .tiny-heart {
+  margin-bottom: 12px;
+}
+
+.scratch-message p {
+  font: 500 18px / 1.5 "Cormorant Garamond", serif;
+  color: #8b3f57;
+}
+
+
+.scratch-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: grab;
+  touch-action: none;
+  z-index: 5;
+}
+
+@media(max-width:750px) {
+
+  .love-cards {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+  }
+
+  .love-card {
+    min-height: 160px;
+  }
+
+}
+/* =========================
+   LOVE LETTER
+========================= */
+
+.letter-page {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* TITLE */
+
+.letter-title {
+  text-align: center;
+  margin-bottom: 45px;
+  position: relative;
+  z-index: 10;
+}
+
+.letter-title h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(34px, 5vw, 55px);
+  font-weight: 600;
+  color: #b83f68;
+  margin: 0;
+}
+
+.letter-hint {
+  margin-top: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: #c96b89;
+}
+
+
+/* SCENE */
+
+.letter-scene {
+  position: relative;
+  width: min(650px, 90%);
+  height: 430px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* FLOATING HEARTS */
+
+.letter-hearts span {
+  position: absolute;
+  color: #e94f86;
+  font-size: 20px;
+  animation: letterFloat 4s ease-in-out infinite;
+}
+
+.letter-hearts span:nth-child(1) {
+  left: 4%;
+  top: 35%;
+}
+
+.letter-hearts span:nth-child(2) {
+  right: 7%;
+  top: 25%;
+  animation-delay: 1s;
+}
+
+.letter-hearts span:nth-child(3) {
+  left: 12%;
+  bottom: 15%;
+  animation-delay: 2s;
+}
+
+@keyframes letterFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+}
+
+
+/* =========================
+   ENVELOPE
+========================= */
+
+.envelope {
+  position: relative;
+  width: min(520px, 90vw);
+  height: 310px;
+  cursor: pointer;
+  perspective: 1000px;
+  filter: drop-shadow(0 20px 25px rgba(160, 60, 95, .18));
+}
+
+
+/* BACK */
+
+.envelope-back {
+  position: absolute;
+  inset: 0;
+  background: #f9c2d2;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+
+/* LETTER */
+
+.letter-paper {
+  position: absolute;
+
+  left: 6%;
+  width: 88%;
+  height: 260px;
+
+  bottom: 12px;
+
+  background: #fffdf7;
+
+  border-radius: 10px;
+
+  padding: 35px 38px 25px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  color: #93465e;
+
+  box-shadow:
+    0 10px 30px rgba(150, 60, 90, .12);
+
+  z-index: 2;
+
+  transform: translateY(130px);
+
+  opacity: 0;
+
+  transition:
+    transform .8s ease,
+    opacity .5s ease;
+
+  overflow: hidden;
+}
+
+
+/* LETTER HEART */
+
+.letter-heart {
+  width: 34px;
+  height: 34px;
+
+  margin: 0 auto 15px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #df3d73;
+
+  color: white;
+
+  font-size: 16px;
+
+  box-shadow:
+    0 5px 12px rgba(220, 55, 110, .25);
+}
+
+
+.letter-paper p {
+  margin: 0;
+
+  font-family: "Cairo", sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+
+  direction: rtl;
+
+  color: #93465e;
+}
+
+
+.letter-sign {
+  margin-top: 15px;
+
+  text-align: right;
+
+  direction: ltr;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 19px;
+
+  font-weight: 600;
+
+  color: #a33d61;
+}
+
+
+/* =========================
+   ENVELOPE FRONT
+========================= */
+
+.envelope-front {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 72%;
+
+  background: #f58bb1;
+
+  clip-path: polygon(
+    0 0,
+    50% 55%,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+
+  z-index: 4;
+
+  border-radius: 0 0 5px 5px;
+}
+
+
+/* =========================
+   FLAP
+========================= */
+
+.envelope-flap {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 62%;
+
+  background: #f6a3c0;
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    50% 100%
+  );
+
+  transform-origin: top center;
+
+  transition:
+    transform .8s cubic-bezier(.4, 0, .2, 1);
+
+  z-index: 5;
+}
+
+
+/* =========================
+   HEART SEAL
+========================= */
+
+.envelope-seal {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 46px;
+  height: 46px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #dc3671;
+
+  color: white;
+
+  font-size: 21px;
+
+  box-shadow:
+    0 7px 18px rgba(190, 40, 90, .3);
+
+  z-index: 6;
+
+  transition:
+    transform .5s ease,
+    opacity .4s ease;
+}
+
+
+/* =========================
+   OPEN STATE
+========================= */
+
+.envelope.open .envelope-flap {
+  transform: rotateX(180deg);
+  z-index: 1;
+}
+
+
+.envelope.open .envelope-seal {
+  opacity: 0;
+
+  transform:
+    translate(-50%, -50%)
+    scale(.6);
+}
+
+
+.envelope.open .letter-paper {
+  transform: translateY(-85px);
+  opacity: 1;
+  z-index: 3;
+}
+
+/* =========================
+   OPEN LETTER - SHOW PAPER ONLY
+========================= */
+
+.envelope.open .envelope-back,
+.envelope.open .envelope-flap,
+.envelope.open .envelope-front,
+.envelope.open .envelope-seal {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+/* الورقة تظهر كاملة */
+
+.envelope.open .letter-paper {
+  z-index: 20;
+
+  opacity: 1;
+
+  transform: translateY(0);
+
+  width: 100%;
+  height: 310px;
+
+  left: 0;
+  bottom: 0;
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 15px 35px rgba(150, 60, 90, .15);
+
+  transition:
+    transform .8s ease,
+    opacity .5s ease,
+    width .5s ease;
+}
+
+
+/* نخلي الكلام كله ظاهر */
+
+.envelope.open .letter-paper p {
+  opacity: 1;
+  position: relative;
+  z-index: 2;
+}
+
+
+/* القلب فوق الورقة */
+
+.envelope.open .letter-heart {
+  position: relative;
+  z-index: 3;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width: 600px) {
+
+  .letter-title {
+    margin-bottom: 25px;
+  }
+
+  .letter-title h2 {
+    font-size: 34px;
+  }
+
+  .letter-hint {
+    font-size: 7px;
+    letter-spacing: 2.5px;
+  }
+
+  .letter-scene {
+    height: 390px;
+  }
+
+  .envelope {
+    width: 90vw;
+    height: 230px;
+  }
+
+  .letter-paper {
+    height: 235px;
+    padding: 25px 20px 18px;
+  }
+
+  .letter-paper p {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .letter-sign {
+    font-size: 16px;
+  }
+
+  .envelope-seal {
+    width: 40px;
+    height: 40px;
+  }
+
+}
+
+/* =========================
+   BIRTHDAY SURPRISE
+========================= */
+
+.birthday-surprise {
+  min-height: 80vh;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  position: relative;
+
+  padding: 80px 20px;
+
+  background: #fffaf7;
+}
+
+
+/* =========================
+   CAKE
+========================= */
+
+.birthday-cake {
+  position: relative;
+
+  width: 120px;
+  height: 125px;
+
+  margin-bottom: 25px;
+}
+
+
+/* CAKE BODY */
+
+.cake-body {
+  position: absolute;
+
+  left: 10px;
+  bottom: 0;
+
+  width: 100px;
+  height: 55px;
+
+  background: #ec4f91;
+
+  border-radius:
+    5px
+    5px
+    12px
+    12px;
+
+  box-shadow:
+    inset 0 -8px 0 rgba(180, 35, 95, .12),
+    0 10px 20px rgba(200, 60, 110, .15);
+}
+
+
+/* CAKE TOP */
+
+.cake-top {
+  position: absolute;
+
+  left: 10px;
+  bottom: 42px;
+
+  width: 100px;
+  height: 25px;
+
+  background: #f477aa;
+
+  border-radius: 5px 5px 8px 8px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-around;
+
+  padding: 0 10px;
+
+  box-sizing: border-box;
+}
+
+
+.cake-top span {
+  color: #fff8fb;
+
+  font-size: 14px;
+
+  transform: translateY(2px);
+}
+
+
+/* =========================
+   CANDLE
+========================= */
+
+.candle {
+  position: absolute;
+
+  left: 50%;
+
+  bottom: 65px;
+
+  transform: translateX(-50%);
+
+  width: 7px;
+  height: 40px;
+
+  background:
+    repeating-linear-gradient(
+      135deg,
+      #fff 0 4px,
+      #ed78a5 4px 7px
+    );
+
+  border-radius: 2px;
+
+  z-index: 3;
+}
+
+
+/* FLAME */
+
+.flame {
+  position: absolute;
+
+  left: 50%;
+  top: -20px;
+
+  transform:
+    translateX(-50%)
+    rotate(45deg);
+
+  width: 13px;
+  height: 13px;
+
+  background: #ffb52e;
+
+  border-radius:
+    50% 50% 50% 0;
+
+  box-shadow:
+    0 0 12px #ffb52e,
+    0 0 22px rgba(255, 181, 46, .45);
+
+  animation:
+    flameMove .8s ease-in-out infinite alternate;
+}
+
+
+@keyframes flameMove {
+
+  from {
+    transform:
+      translateX(-50%)
+      rotate(40deg)
+      scale(1);
+  }
+
+  to {
+    transform:
+      translateX(-50%)
+      rotate(50deg)
+      scale(1.12);
+  }
+
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.birthday-surprise h2 {
+  margin: 5px 0 20px;
+
+  font-family:
+    "Cairo",
+    sans-serif;
+
+  font-size:
+    clamp(24px, 4vw, 38px);
+
+  font-weight: 600;
+
+  color: #a74462;
+
+  direction: rtl;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.surprise-button {
+  border: none;
+
+  outline: none;
+
+  cursor: pointer;
+
+  background: #ec2874;
+
+  color: white;
+
+  font-family:
+    "Cairo",
+    sans-serif;
+
+  font-size: 14px;
+
+  padding:
+    10px
+    25px;
+
+  border-radius: 30px;
+
+  box-shadow:
+    0 8px 20px rgba(220, 40, 105, .25);
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    background .25s ease;
+}
+
+
+.surprise-button:hover {
+  transform: translateY(-3px);
+
+  background: #d91e67;
+
+  box-shadow:
+    0 12px 25px rgba(220, 40, 105, .3);
+}
+
+
+.surprise-button:active {
+  transform: scale(.95);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width: 600px) {
+
+  .birthday-surprise {
+    min-height: 70vh;
+
+    padding:
+      60px
+      15px;
+  }
+
+  .birthday-surprise h2 {
+    font-size: 25px;
+  }
+
+  .surprise-button {
+    font-size: 13px;
+
+    padding:
+      9px
+      22px;
+  }
+
+}
+/* =========================
+   BIRTHDAY PHOTO MODAL
+========================= */
+
+.birthday-photo-modal {
+  position: fixed;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: #fffaf7;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px 20px;
+
+  box-sizing: border-box;
+
+  opacity: 0;
+  visibility: hidden;
+
+  pointer-events: none;
+
+  z-index: 9999;
+
+  transition:
+    opacity .5s ease,
+    visibility .5s ease;
+}
+
+
+.birthday-photo-modal.show {
+  opacity: 1;
+
+  visibility: visible;
+
+  pointer-events: auto;
+}
+
+
+/* CONTENT */
+
+.birthday-photo-content {
+  position: relative;
+
+  width: min(850px, 95vw);
+
+  max-height: 95vh;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+
+/* TITLE */
+
+.birthday-photo-content h1 {
+  margin: 0 0 25px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(42px, 7vw, 78px);
+
+  line-height: .95;
+
+  font-weight: 600;
+
+  color: #c63d70;
+}
+
+
+.birthday-photo-content h1 span {
+  color: #c63d70;
+}
+
+
+/* PHOTO */
+
+.birthday-photo-frame {
+  width: min(500px, 82vw);
+
+  max-height: 58vh;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 20px 50px rgba(170, 60, 100, .18);
+
+  animation:
+    birthdayPhotoIn .8s ease;
+}
+
+
+.birthday-photo-frame img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  max-height: 58vh;
+max-width: 330;
+  
+  object-fit: contain;
+
+  border-radius: 20px;
+}
+
+
+@keyframes birthdayPhotoIn {
+
+  from {
+    opacity: 0;
+
+    transform:
+      scale(.8)
+      translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      scale(1)
+      translateY(0);
+  }
+
+}
+
+
+/* DATE */
+
+.birthday-date {
+  margin-top: 20px;
+
+  font-family:
+    "Montserrat",
+    sans-serif;
+
+  font-size: 14px;
+
+  letter-spacing: 2px;
+
+  color: #d15b83;
+}
+
+
+/* CLOSE */
+
+.close-birthday-photo {
+  position: absolute;
+
+  top: -10px;
+  right: -5px;
+
+  width: 42px;
+  height: 42px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #ec4f88;
+
+  color: white;
+
+  font-size: 28px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  z-index: 10;
+
+  box-shadow:
+    0 6px 18px rgba(200, 50, 100, .25);
+
+  transition:
+    transform .2s ease,
+    background .2s ease;
+}
+
+
+.close-birthday-photo:hover {
+  transform: scale(1.08);
+
+  background: #d92d6c;
+}
+
+
+/* MOBILE */
+
+@media(max-width: 600px) {
+
+  .birthday-photo-modal {
+    padding: 20px 15px;
+  }
+
+  .birthday-photo-content h1 {
+    font-size: 42px;
+
+    margin-bottom: 20px;
+  }
+
+  .birthday-photo-frame {
+    width: 88vw;
+
+    max-height: 55vh;
+  }
+
+  .birthday-photo-frame img {
+    max-height: 55vh;
+  }
+
+  .birthday-date {
+    font-size: 12px;
+
+    margin-top: 15px;
+  }
+
+  .close-birthday-photo {
+    top: -15px;
+    right: 0;
+
+    width: 38px;
+    height: 38px;
+
+    font-size: 24px;
+  }
+
+}
+/* =========================
+   SURPRISE PAGE
+========================= */
+
+.birthday-surprise {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 60px 20px;
+
+  box-sizing: border-box;
+
+  background: #fffaf7;
+
+  position: relative;
+}
+
+.birthday-surprise h2 {
+  margin: 25px 0 20px;
+
+  color: #a74462;
+
+  font-size: clamp(25px, 5vw, 40px);
+
+  direction: rtl;
+}
+
+.surprise-button {
+  border: none;
+
+  cursor: pointer;
+
+  background: #ec2874;
+
+  color: white;
+
+  padding: 12px 28px;
+
+  border-radius: 30px;
+
+  font-size: 15px;
+
+  box-shadow: 0 8px 20px rgba(220,40,105,.25);
+}
+
+/* =========================
+   SURPRISE PAGE
+========================= */
+
+.birthday-surprise {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 60px 20px;
+
+  box-sizing: border-box;
+
+  background: #fffaf7;
+}
+
+
+/* CAKE */
+
+.birthday-cake {
+  position: relative;
+
+  width: 120px;
+  height: 125px;
+
+  margin-bottom: 25px;
+}
+
+
+/* CAKE BODY */
+
+.cake-body {
+  position: absolute;
+
+  left: 10px;
+  bottom: 0;
+
+  width: 100px;
+  height: 55px;
+
+  background: #ec4f91;
+
+  border-radius: 5px 5px 12px 12px;
+
+  box-shadow:
+    inset 0 -8px 0 rgba(180,35,95,.12),
+    0 10px 20px rgba(200,60,110,.15);
+}
+
+
+/* CAKE TOP */
+
+.cake-top {
+  position: absolute;
+
+  left: 10px;
+  bottom: 42px;
+
+  width: 100px;
+  height: 25px;
+
+  background: #f477aa;
+
+  border-radius: 5px 5px 8px 8px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-around;
+
+  padding: 0 10px;
+
+  box-sizing: border-box;
+}
+
+.cake-top span {
+  color: #fff8fb;
+  font-size: 14px;
+}
+
+
+/* CANDLE */
+
+.candle {
+  position: absolute;
+
+  left: 50%;
+  bottom: 65px;
+
+  transform: translateX(-50%);
+
+  width: 7px;
+  height: 40px;
+
+  background:
+    repeating-linear-gradient(
+      135deg,
+      #fff 0 4px,
+      #ed78a5 4px 7px
+    );
+
+  border-radius: 2px;
+
+  z-index: 3;
+}
+
+
+/* FLAME */
+
+.flame {
+  position: absolute;
+
+  left: 50%;
+  top: -20px;
+
+  transform:
+    translateX(-50%)
+    rotate(45deg);
+
+  width: 13px;
+  height: 13px;
+
+  background: #ffb52e;
+
+  border-radius: 50% 50% 50% 0;
+
+  box-shadow:
+    0 0 12px #ffb52e,
+    0 0 22px rgba(255,181,46,.45);
+
+  animation: flameMove .8s ease-in-out infinite alternate;
+}
+
+
+@keyframes flameMove {
+
+  from {
+    transform:
+      translateX(-50%)
+      rotate(40deg)
+      scale(1);
+  }
+
+  to {
+    transform:
+      translateX(-50%)
+      rotate(50deg)
+      scale(1.12);
+  }
+
+}
+
+
+/* TEXT */
+
+.birthday-surprise h2 {
+  margin: 5px 0 20px;
+
+  font-family: "Cairo", sans-serif;
+
+  font-size: clamp(24px, 4vw, 38px);
+
+  font-weight: 600;
+
+  color: #a74462;
+
+  direction: rtl;
+}
+
+
+/* BUTTON */
+
+.surprise-button {
+  border: none;
+
+  outline: none;
+
+  cursor: pointer;
+
+  background: #ec2874;
+
+  color: white;
+
+  font-family: "Cairo", sans-serif;
+
+  font-size: 14px;
+
+  padding: 11px 28px;
+
+  border-radius: 30px;
+
+  box-shadow:
+    0 8px 20px rgba(220,40,105,.25);
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+
+.surprise-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 25px rgba(220,40,105,.3);
+}
+
+
+.surprise-button:active {
+  transform: scale(.95);
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px) {
+
+  .birthday-surprise {
+    min-height: 100vh;
+
+    padding: 50px 15px;
+  }
+
+  .birthday-surprise h2 {
+    font-size: 25px;
+  }
+
+}
+
+/* =========================
+   BIRTHDAY PHOTO
+========================= */
+
+.birthday-photo-modal {
+  position: fixed;
+  inset: 0;
+
+  z-index: 100;
+
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(255, 248, 250, .96);
+
+  backdrop-filter: blur(8px);
+}
+
+.birthday-photo-modal.show {
+  display: flex;
+}
+
+.birthday-photo-card {
+  position: relative;
+
+  width: min(500px, 92vw);
+
+  padding: 18px 18px 25px;
+
+  background: #fff;
+
+  border: 1px solid #f1dce2;
+
+  border-radius: 12px;
+
+  box-shadow: 0 25px 70px rgba(120, 50, 70, .18);
+
+  text-align: center;
+
+  animation: photoAppear .5s ease;
+}
+
+.birthday-photo-card img {
+  display: block;
+
+  width: 100%;
+
+  max-height: 65vh;
+
+  object-fit: contain;
+
+  border-radius: 8px;
+}
+
+.birthday-photo-card h2 {
+  margin-top: 20px;
+
+  font-family: "Cairo", sans-serif;
+
+  font-size: clamp(22px, 5vw, 32px);
+
+  font-weight: 600;
+
+  color: #a74462;
+
+  direction: rtl;
+}
+
+.birthday-photo-close {
+  position: absolute;
+
+  top: 8px;
+  right: 10px;
+
+  width: 32px;
+  height: 32px;
+
+  border: 0;
+
+  background: #fff;
+
+  color: #a74462;
+
+  font-size: 25px;
+
+  cursor: pointer;
+
+  z-index: 2;
+
+  border-radius: 50%;
+}
+
+@keyframes photoAppear {
+
+  from {
+    opacity: 0;
+    transform: scale(.85) translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+
+}
+/* تصغير الصورة وتوسيع مساحة الكلام */
+.story-grid {
+  display: grid !important;
+  grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr) !important;
+  gap: 35px !important;
+  align-items: start !important;
+  width: 100% !important;
+}
+
+.story-grid .photo-frame {
+  width: 100% !important;
+  max-width: 340px !important;
+  margin: 0 auto !important;
+  min-width: 0 !important;
+}
+
+.story-grid .photo-frame img {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+.story-grid .photo-placeholder {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.story-grid .story-note {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  box-sizing: border-box !important;
+  line-height: 1.9 !important;
+}
+
+@media (max-width: 700px) {
+  .story-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .story-grid .photo-frame {
+    max-width: 300px !important;
+  }
+}
+
+.story-grid .story-note {
+  width: 100% !important;
+  max-width: 650px !important;
+}
+
+.story-grid .story-note p {
+  font-size: 18px !important;
+  line-height: 2 !important;
+  font-family: "Cairo", sans-serif !important;
+  font-weight: 500 !important;
+}
+
+.photo-placeholder video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+;
+
+/* First photo section only */
+.first-photo-story {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.first-photo-story .section-copy {
+  width: 100%;
+  text-align: center;
+}
+
+.first-photo-story .story-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.first-photo-story .story-note {
+  width: 100%;
+  text-align: center;
+  order: 1;
+}
+
+.first-photo-story .photo-frame {
+  width: 100%;
+  max-width: 400px;
+  order: 2;
+}
+
+.first-photo-story .photo-placeholder {
+  width: 100%;
+}
+
+.first-photo-story .photo-placeholder img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+/* ONLY the first photo story */
+.first-photo-story {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+.first-photo-story .section-copy {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+}
+
+.first-photo-story .story-grid {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  width: 100% !important;
+  gap: 20px !important;
+}
+
+.first-photo-story .story-note {
+  order: 1 !important;
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+}
+
+.first-photo-story .photo-frame {
+  order: 2 !important;
+  display: block !important;
+  width: 100% !important;
+  max-width: 400px !important;
+  margin: 0 auto !important;
+}
+
+.first-photo-story .photo-placeholder {
+  width: 100% !important;
+}
+
+.first-photo-story .photo-placeholder img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  margin: 0 auto !important;
+  object-fit: cover;
+}
+/* Final birthday photo only */
+.final-friend-photo {
+  background: #fff8fa;
+  padding: 70px 20px;
+}
+
+.final-friend-card {
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.final-friend-image {
+  width: 100%;
+  max-width: 340px;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #f2e0e4;
+  box-shadow: 0 15px 40px #7b415015;
+  transform: rotate(-2deg);
+}
+
+.final-friend-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.final-friend-message {
+  width: 100%;
+  text-align: center;
+  padding: 28px 22px;
+  background: #fff;
+  border: 1px solid #f3e0e4;
+  box-shadow: 0 15px 35px #8e445010;
+}
+
+.final-friend-message h2 {
+  font: 500 32px "Cormorant Garamond", serif;
+  color: #a04d66;
+  margin: 12px 0;
+}
+
+.final-friend-message p {
+  font: 13px/2 Montserrat, sans-serif;
+  color: #956d79;
+  margin-top: 12px;
+}
+
+.final-friend-message .last-line {
+  color: #b0516d;
+  font-weight: 500;
+  margin-top: 22px;
+}

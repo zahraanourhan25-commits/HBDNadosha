@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A special date between us.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="particles"></div>
+
+<!-- 1. LOCK SCREEN -->
+<section id="lockScreen" class="screen lock-screen">
+  <div class="lock-inner">
+    <div class="key-circle">⌕</div>
+    <h1>A special date between us.</h1>
+    <div class="for-name">FOR <span id="lockName">Nadoshty</span></div>
+
+    <div class="pin-card">
+      <div class="pin-boxes" id="pinBoxes">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      
+      </div>
+      <p>ENTER OUR SPECIAL DATE BELOW</p>
+
+      <div class="keypad">
+        <button data-key="1">1</button><button data-key="2">2</button><button data-key="3">3</button>
+        <button data-key="4">4</button><button data-key="5">5</button><button data-key="6">6</button>
+        <button data-key="7">7</button><button data-key="8">8</button><button data-key="9">9</button>
+        <span></span><button data-key="0">0</button><button data-key="del" class="del">DEL</button>
+      </div>
+      <div id="pinError" class="pin-error">That isn't our date ♡</div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. UNLOCKED -->
+<section id="welcomeScreen" class="screen simple-screen hidden">
+  <div class="mini-key">⌕</div>
+  <h2>Key to my heart</h2>
+  <div class="sub">UNLOCKED</div>
+  <div class="welcome-card">
+    <div class="heart-badge">♥</div>
+    <p>Welcome, my love.</p>
+  </div>
+</section>
+
+<!-- 3. TRANSITION -->
+<section id="arabicIntro" class="screen transition-screen hidden">
+  <div class="arabic-line" ه" عيد انهارده د ميلا"</div>ندوشتى😍ا </div>
+  <div class="tiny-heart">♥</div>
+</section>
+
+
+!-- 4. MAIN SCROLL STORY --
+<main id="mainSite" class="hidden">
+
+  <section class="birthday-hero story-page">
+    <div class="floating-word">♥</div>
+    <div class="hero-card">
+      <h1>Happy Birthday,<br><span id="heroName">Nadoshty</span></h1>
+    </div>
+    <div class="scroll-label">SCROLL TO BEGIN</div>
+    <div class="dot-heart" aria-hidden="true"></div>
+  </section>
+
+
+<section class="story-page our-story first-photo-story">
+
+  <div class="section-copy">
+    <div class="tiny-heart">♥</div>
+    <h2></h2>
+    <p></p>
+  </div>
+
+  <div class="story-grid">
+
+    <div class="story-note">
+      <div class="note-heart">♥</div>
+      <h2>Hi👋</h2>
+      <p>إيه الاخبار؟ طمنيني عليكي، يارب دايما تكونى بخير💗
+
+بقولك إيه، هو إنتِ بجد فاكرة إني نسيت عيد ميلادك؟ 😂
+عارفة إني ممكن أكون مبيّنة لك إني ناسية، ومش فاكرة لا يوم ولا تاريخ، بس الحقيقة إن فيه حاجات مينفعش تتنسي، وإنتِ واحدة من الحاجات دي.
+
+بس المرة دي مكنتش عايزة أقولك كل سنة وإنتِ طيبة وخلاص… كنت عايزة أعمل لك حاجة تليق بيكي وبمكانتك عندي🥹 🤎
+بقولك اى اى رئيك فى الصوره دى 🌚
+هقولك انا
+الصورة دي ملهاش لازمة خالص، بس قولت أحطها يعني… مش كل حاجة لازم يبقى ليها سبب عادى 😂😂</p>
+    </div>
+
+    <div class="photo-frame">
+      <div class="photo-placeholder">
+        <img src="img.m1.jpeg" alt="Our Photo">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+  <section class="story-page our-story">
+    <div class="section-copy">
+      <div class="tiny-heart">♥</div>
+      <h2>Our Story</h2>
+      <p>Every moment we share becomes a memory. It holds close forever.</p>
+    </div>
+    <div class="story-grid">
+      <div class="photo-frame"><div class="photo-placeholder">
+        <img src="img.n1.jpeg" alt="">
+      </div>
+    </div>
+
+      <div class="story-note">
+        <div class="note-heart">♥</div>
+        <h3>1<br></h3>
+        <p>أول صورة لينا
+دي أول صورة اتصورتها أنا وإنتي فعلًا.
+كنا في المدرسة بنودي ورق عشان استمارة تالتة ثانوي، ومكنّاش نعرف وقتها إن الصورة دي هتبقى بداية لكل اللي إحنا فيه دلوقتي.
+فاكرة إني وقتها كنت خايفة أوي…
+كنت خايفة إننا نبقى مجرد ذكرى حلوة من أيام المدرسة، وإن بعد ما نخلص امتحانات الثانوية العامة، كل واحدة تروح لحالها، وبعد شهر أو شهرين أو حتى سنة، كل واحدة تنشغل في حياتها وننسى بعض.
+بس الحمدلله حصل عكس كل اللي كنت خايفة منه.
+من غير ما نحس، قربنا من بعض أكتر وأكتر، لحد ما بقينا أقرب اتنين لبعض. ❤️
+وبقيتي أقرب واحدة لقلبي، والوحيدة اللي بقدر أجري عليها في أي وقت، من غير ما أفكر حتى.
+لو عاملة مشكلة، أو عملت حاجة غلط، أو مخنوقة، زعلانة، مضايقة، أو حتى فرحانة…
+أول واحدة بكون عايزة أحكيلها وأجري عليها هي إنتي.
+بجد أنا ببقى بقول لنفسي: يا بختي بيكي، ويا بختي إن ربنا جمعني بيكي.
+وبحمد ربنا كل يوم إنه خلانا نحب بعض ونقرب من بعض بالشكل ده، من غير ما حتى نحس إمتى حصل ده.
+والأجمل إن ده كله حصل رغم إني في البداية كنت أصلًا رافضة فكرة إني أبقى صاحبة حد أو أعمل صحاب. 😂
+بس الحمدلله إن ربنا شال الفكرة دي من دماغي، وجمعنا ببعض، 
+وخلانا نكون أصحاب ونحب بعض بالشكل ده.
+مكنّاش عارفين إن الصورة دي هتبقى أول صورة في حكاية كبيرة أوي بينا.
+بس الحمدلله إنها كانت البداية. ❤️</p>
+      </div>
+<div></div>
+    </div>
+  </section>
+
+  <section class="story-page our-story">
+  <div class="section-copy">
+    <div class="tiny-heart">♥</div>
+    <h2>Our Story</h2>
+    <p>Every moment we share becomes a memory. It holds close forever.</p>
+  </div>
+
+  <div class="story-grid">
+
+    <div class="story-note">
+      <div class="note-heart">♥</div>
+      <h3>2<br></h3>
+      <p>وأهو بعد ما خلصنا الثانوية العامة، بدأت مرحلة جديدة من حياتنا، ومن أحلى الحاجات فيها إننا كنا لسه مع بعض. ❤️
+فاكرة أول فرح روحناه سوا؟ يمكن وقتها الموضوع كان بالنسبالنا مجرد خروجة وفرحة حلوة، بس بالنسبة ليا كانت ذكرى جديدة بتتضاف لكل الذكريات اللي بدأت تكبر بينا واحدة واحدة.
+من أيام المدرسة، والخوف من إن كل واحدة فينا تروح في طريق، لحد ما لقينا نفسنا بنعدّي مرحلة الثانوية ونبدأ نشوف ونعيش حاجات جديدة سوا.
+وكل مرة كنا بنتقابل فيها، وكل خروجة، وكل ضحكة، وكل موقف صغير، كان بيأكدلي أكتر إن وجودك في حياتي مش مجرد صدفة عابرة.
+بحب جدًا إن عندي صور وذكريات معاكي ،وأتمنى إن الصورة دي تبقى واحدة من صور كتير أوي جاية، ونفضل كل شوية نفتكرها ونضحك ونقول: فاكرة أول فرح روحناه سوا؟ 😂❤️
+ويا رب كل اللي جاي من عمرنا يكون مليان أيام حلوة، وضحك، وخروجات، وذكريات أكتر وأكتر، ونفضل دايمًا جنب بعض مهما اتغيرت الأيام.
+كل ذكرى معاكي ليها مكان خاص في قلبي، ودي واحدة من الذكريات اللي عمري ما هنسى تفاصيلها. ❤️"</p>
+    </div>
+
+    <div class="photo-frame">
+      <div class="photo-placeholder">
+        <img src="img.n2.jpeg" alt="Our Photo">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <section class="story-page our-story">
+    <div class="section-copy">
+      <div class="tiny-heart">♥</div>
+      <h2>Our Story</h2>
+      <p>Every moment we share becomes a memory. It holds close forever.</p>
+    </div>
+    <div class="story-grid">
+
+      <div class="photo-frame"><div class="photo-placeholder">
+        <img src="img.n3.jpeg" alt="Our Photo">
+      </div></div>
+      <div class="story-note">
+        <div class="note-heart">♥</div>
+        <h3>3<br>.</h3>
+        <p>فاكرة اليوم ده لما نزلنا شبين سوا عشان نتصور  للكلية؟ يمكن كان مجرد يوم عادي في نظر أي حد، لكن بالنسبالي كان يوم من الأيام اللي بحب أفتكرها جدًا. ❤️
+كنا مش فى احسن حالتنا و وسط كل الزحمة والتفاصيل دي، كنا بنعمل ذكريات جديدة من غير ما نحس. ضحكنا، واتصورنا، واتمشينا سوا، وكل حاجة بسيطة في اليوم ده بقت ليها ذكرى عندي لمجرد إنك كنتي معايا.
+وأكتر حاجة بحبها في حكايتنا إن الذكريات الحلوة مش لازم تكون في أماكن مميزة أو مناسبات كبيرة… ساعات مجرد مشوار عادي معاكي كلمه حلوه  بيبقى من أجمل الأيام اللي أفتكرها بعدين.
+ويمكن وقتها ماكنّاش عارفين إحنا هنعيش كام موقف تاني سوا، ولا كام صورة هتتجمع بينا، بس أنا مبسوطة جدًا إن كل مرحلة جديدة في حياتي كان فيها جزء منك.
+ 
+وربنا يديمك في حياتي، ويفضل كل مشوار معاكي ذكرى حلوة تستاهل تتحفظ. 🫂🤍"</p>
+      </div>
+
+
+    </div>
+  </section>
+
+  <section class="story-page our-story">
+  <div class="section-copy">
+    <div class="tiny-heart">♥</div>
+    <h2>Our Story</h2>
+    <p>Every moment we share becomes a memory. It holds close forever.</p>
+  </div>
+
+  <div class="story-grid">
+
+    <div class="story-note">
+      <div class="note-heart">♥</div>
+      <h3>4<br></h3>
+      <p>أول مرة جيتلك البيت فيها  ❤️
+يمكن اليوم ده كان بالنسبالك يوم عادي، لكن أنا لسه فاكرة إحساسه وتفاصيله. كان من أول المرات اللي حسيت فيها إن علاقتنا خرجت من خروجات الدروس والدراسه ، وبقى ليا مكان في حياتك وبيتك كمان.
+من وقتها بدأت أحس إنك مش مجرد واحدة بقضي معاها وقت حلو، إنتِ بقيتي حد بحب أكون موجودة معاه في كل التفاصيل، حتى أبسط التفاصيل اللي ممكن أي حد يعدي عليها من غير ما ياخد باله.
+يمكن عشان كده بحب الصور اللي زي دي أوي، لأنها مش مجرد صورة… دي بتفكرني بمرحلة كاملة وبإحساس معين مش بيتكرر. ❤️
+وأنا فعلًا ممتنة لكل لحظة خلتني أقرب منك، ولكل ذكرى صغيرة بدأت تتحول مع الوقت لحاجة كبيرة أوي في قلبي.🥹🫂</p>
+    </div>
+
+    <div class="photo-frame">
+      <div class="photo-placeholder">
+        <img src="img.n4.jpeg" alt="Our Photo">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="story-page our-story">
+    <div class="section-copy">
+      <div class="tiny-heart">♥</div>
+      <h2>Our Story</h2>
+      <p>Every moment we share becomes a memory. It holds close forever.</p>
+    </div>
+    <div class="story-grid">
+      <div class="photo-frame"><div class="photo-placeholder">
+        <img src="img.n5.jpeg" alt="Our Photo">
+      </div>
+    </div>
+      <div class="story-note">
+        <div class="note-heart">♥</div>
+        <h3>5<br></h3>
+        <p>وأول شوبينج لينا سوا بقى 😂❤️
+من الحاجات اللي ممكن شكلها يكون بسيط جدًا، مجرد إن اتنين نزلوا يشتروا حاجات مع بعض، لكن لما تكوني إنتِ الشخص اللي معايا، حتى أبسط المشاوير
+فاكرة الضحك والكلام واللف ؟ 
+يمكن مش فاكرة كل تفاصيل اليوم، بس فاكرة الإحساس الحلو اللي كان فيه.
+
+كل ما أشوف الصورة دي، افتكر اليوم والذكريات الحلوه اللى فيه  والضحك على أي حاجة، وببقى حاسة إن اليوم كان أحلى لمجرد إن كنا مع بعض</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="story-page our-story">
+  <div class="section-copy">
+    <div class="tiny-heart">♥</div>
+    <h2>Our Story</h2>
+    <p>Every moment we share becomes a memory. It holds close forever.</p>
+  </div>
+
+  <div class="story-grid">
+
+    <div class="story-note">
+      <div class="note-heart">♥</div>
+      <h3>6<br></h3>
+      <p>يمكن الآيس كريم كان مجرد حاجة بسيطة بنجيبها بعد درس العربي، بس بالنسبالي كان أكتر من كده بكتير. 🍦❤️
+
+يمكن دى الحاجه الوحيده اللى جمعتنا مع بعض❤️ 
+تقريبًا كل مرة نخلص الدرس العربى كنا لازم نجيب آيس كريم وناكله واحنا ماشيين ، 
+يمكن هو اللي جمعنا في البداية، بس اللي خلّى كل مرة ليها طعم مختلف هو إننا كنا بنعيشها سوا وكانت اجمل ذكريات عيشناها وقتها ويااه على المواقف  اللى كانت بتحصل لينا فى الشارع 😂😂
+ولحد دلوقتي، كل ما أشوف آيس كريم أفتكر الأيام دي وأفتكرنا إحنا الاتنين وإحنا راجعين من درس العربي، وأقول يوم من ايامها  تانى 🤍🍦</p>
+    </div>
+
+    <div class="photo-frame">
+      <div class="photo-placeholder">
+        <img src="img.n6.jpeg" alt="Our Photo">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <section class="story-page our-story">
+    <div class="section-copy">
+      <div class="tiny-heart">♥</div>
+      <h2>Our Story</h2>
+      <p>Every moment we share becomes a memory. It holds close forever.</p>
+    </div>
+    <div class="story-grid">
+      <div class="photo-frame"><div class="photo-placeholder">
+
+        <img src="img.n7.jpeg" alt="Our Photo">
+        
+      </div></div>
+      <div class="story-note">
+        <div class="note-heart">♥</div>
+        <h3> 7<br></h3>
+        <p>اول صوره لينا وانتى بالنقاب كنا في  العيد 💗
+كان شكلك عسوووول موت🥹💗
+عيدنا كان أحلى عشان كنا سوا😚🫂 💗</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="story-page our-story">
+  <div class="section-copy">
+    <div class="tiny-heart">♥</div>
+    <h2>Our Story</h2>
+    <p>Every moment we share becomes a memory. It holds close forever.</p>
+  </div>
+
+  <div class="story-grid">
+
+    <div class="story-note">
+      <div class="note-heart">♥</div>
+      <h3>8 <br> </h3>
+      <p>كان يوم ميلادى و عمرى بجد ما انساه كان عيد ميلاد 
+ورغم أن اليوم دا كان عندك امتحان فيه  إنتِ جيتيلي البيت وشاركتي يوم من الأيام اللي بحبها وأفتكر تفاصيلها زملائه يوم عمرى ما اقدر انساه🥹
+وجودك في اليوم ده كان كفاية يخليه مختلف، وأحلى حاجة إننا مع الوقت بقينا بنشارك بعض تفاصيل أكتر وأكتر، حتى الأيام اللي تخص كل واحدة فينا بقت ليها مكان عند التاني❤️
+شكرًا إنك كنتِ جزء من يومي، وجزء من فرحتي🫂🫂🫂❤️</p>
+    </div>
+
+    <div class="photo-frame">
+      <div class="photo-placeholder">
+        <img src="img.n8.jpeg" alt="Our Photo">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <section class="story-page our-story">
+    <div class="section-copy">
+      <div class="tiny-heart">♥</div>
+      <h2>Our Story</h2>
+      <p>Every moment we share becomes a memory. It holds close forever.</p>
+    </div>
+    <div class="story-grid">
+      <div class="photo-frame">
+  <div class="photo-placeholder">
+    <video controls playsinline preload="metadata">
+    <source src="video.n1.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+      <div class="story-note">
+        <div class="note-heart">♥</div>
+        <h3>9 <br>/h3>
+        <p>مش محتاجة أتكلم خالص… الفيديو ده بيقول كل اللي جوايا.
+كل لحظة فيه، وكل ضحكة وكل تفصيلة، بتحكي قد إيه وجودك في حياتي بقى اغلى حاجه حصلتلى فى حياتى كلها 
+ربنا يديمك في حياتي ويديم بينا كل  الحب وكل حاجه حلوه 🫂💗</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="story-page our-story">
+  <div class="section-copy">
+    <div class="tiny-heart">♥</div>
+    <h2>Our Story</h2>
+    <p>Every moment we share becomes a memory. It holds close forever.</p>
+  </div>
+
+  <div class="story-grid">
+
+    <div class="story-note">
+      <div class="note-heart">♥</div>
+      <h3>10 <br> </h3>
+      <p>خطيبي خطيبي 😂😂💍❤️
+هموووت بجد 😂😭
+المفروض إن النهارده عيد ميلادك، وأنا لحد دلوقتي لسه ماقولتلكيش كل سنة وإنتِ طيبة!
+كل سنة وإنتِ طيبة يا حبيبت قلب وعيون نور😚🫂🫂🩵،  
+
+ويا رب السنة الجاية أشوفك بقى مع خطيبك الحقيقي 😂💍❤️
+وتكوني لابسة خاتمك بجد😂❤️
+ويا رب أشوفك أسعد وأجمل واحدة، وكل اللي نفسك فيه يتحقق قدام عينيك يا عيونى🫂🩵</p>
+    </div>
+
+    <div class="photo-frame">
+      <div class="photo-placeholder">
+        <img src="img.n9.jpeg" alt="Our Photo">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  
+<section class="story-page our-story">
+    <div class="section-copy">
+      <div class="tiny-heart">♥</div>
+      <h2>Our Story</h2>
+      <p>Every moment we share becomes a memory. It holds close forever.</p>
+    </div>
+    <div class="story-grid">
+      <div class="photo-frame">
+        <div class="photo-placeholder">
+        <img src="img.n10.jpeg" alt="Our Photo">
+          YOUR PHOTO
+      </div>
+      </div>
+      <div class="story-note">
+        <div class="note-heart">♥</div>
+        <h3>11 <br>  </h3>
+        <p>كل سنة وانتي طيبة يا حبيبتى،
+ربنا يخليكي ليا يا روح قلبي، وأفضل دايمًا الكتف اللي تسندي عليه في أي وقت ومن غير ما تفكري حتى 🩵🫂</p>
+      </div>
+    </div>
+  </section>
+
+<section class="story-page final-friend-photo">
+  <div class="final-friend-card">
+
+    <div class="final-friend-image">
+      <img src="img.n11.jpeg" alt="My best friend">
+    </div>
+
+    <div class="final-friend-message">
+      <div class="tiny-heart">♥</div>
+      <h2>كل سنة وانتي طيبة يا روح قلبي</h2>
+      <p>
+        يا رب أفضل أشوف ضحكتك الحلوة دي العمر كله،
+        وأفضل جنبك في كل عيد ميلاد وكل لحظة حلوة جاية في حياتك.
+        بحبك أوي يا نادوشتـي، وربنا يخليكي ليا وما يحرمنيش منك أبدًا ❤️
+      </p>
+      <p class="last-line">
+        دي مش آخر ذكرى لينا، دي بداية لذكريات أحلى لسه هنعملها سوا ♥
+      </p>
+    </div>
+
+  </div>
+</section>
+
+  <section class="story-page love-page">
+  <div class="section-title">
+    <div class="tiny-heart">♥</div>
+    <h2>Things I Love About You</h2>
+  </div>
+
+  <div class="love-cards">
+
+  <button class="love-card">
+    <div class="scratch-message">
+      <div class="tiny-heart">♥</div>
+      <p>ضحكتك
+ضحكتك لوحدها كفاية تغيّر مودى يوم كامل 🤍</p>
+    </div>
+    <canvas class="scratch-canvas"></canvas>
+  </button>
+
+  <button class="love-card">
+    <div class="scratch-message">
+      <div class="tiny-heart">♥</div>
+      <p>ابتسامتك
+ابتسامتك من أكتر الحاجات اللي بحبها فيكي،  بتخلّيكي أجمل أوي  😚</p>
+    </div>
+    <canvas class="scratch-canvas"></canvas>
+  </button>
+
+  <button class="love-card">
+    <div class="scratch-message">
+      <div class="tiny-heart">♥</div>
+      <p>كلامك وشكلك وكل حاجه فيكى 
+بحب كلامك وطريقتك وشكلك بحب كل التفاصيل اللي بتخليكي إنتِ بجد🥹🫂💗</p>
+    </div>
+    <canvas class="scratch-canvas"></canvas>
+  </button>
+
+</div>
+</section>
+
+<!-- =========================
+     LOVE LETTER
+========================= -->
+
+<section class="story-page letter-page">
+
+  <div class="section-title letter-title">
+
+    <div class="tiny-heart">♥</div>
+
+    <h2>A letter from my heart.</h2>
+
+    <p class="letter-hint">
+      TAP THE ENVELOPE TO OPEN
+    </p>
+
+  </div>
+
+
+  <div class="letter-scene">
+
+    <div class="letter-hearts">
+      <span>♥</span>
+      <span>♡</span>
+      <span>♥</span>
+    </div>
+
+
+    <div class="envelope" id="envelope">
+
+      <!-- LETTER -->
+
+      <div class="letter-paper">
+
+        <div class="letter-heart">
+          ♥
+        </div>
+
+        <p>
+    كل سنة وإنتي طيبة يا أحلى ندوشه واحلى واحده فى حياتى 🥹، بجد مش عارفة أقولك  اى غير قد إيه أنا مبسوطة إنك في حياتي. إنتي من اكتر الناس اللي وجودهم بيخلّي أي حاجة حلوه فى يومى وحياتى ، وبحب ضحكتك وكلامنا سوا ومن أكتر الحاجات اللي بحبها. أتمنى السنة دي تكون حلوة عليكي وتحققي فيها كل اللي نفسك فيه، وتفضلي دايمًا مبسوطة ومطمنة. ربنا يخليكي ليا يا حبيبت قلبى ونفضل مع بعض دايما و نعمل ذكريات ونهزر ونضحك على كل حاجة زي ما إحنا. بحبك أوي ي ندوشتى🫂💗
+
+          <br><br>
+          أتمنى دايمًا تفضلي مبسوطة،
+          وتحققي كل اللي نفسك فيه،
+          وتفضلي أجمل حاجة في حياتي.
+        </p>
+
+        <div class="letter-sign">
+          With all my love.
+        </div>
+
+      </div>
+
+<!-- ENVELOPE -->
+
+      <div class="envelope-back"></div>
+
+      <div class="envelope-flap"></div>
+
+      <div class="envelope-front"></div>
+
+      <div class="envelope-seal">
+        ♥
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</section>
+  
+
+<!-- =========================
+     SURPRISE PAGE
+========================= -->
+
+<section class="birthday-surprise" id="birthdaySurprise">
+
+  <div class="birthday-cake">
+
+    <div class="candle">
+      <div class="flame"></div>
+    </div>
+
+    <div class="cake-top">
+      <span>♥</span>
+      <span>♥</span>
+      <span>♥</span>
+    </div>
+
+    <div class="cake-body"></div>
+
+  </div>
+
+
+  <h2>
+    دوسي و شوفي المفاجأة بتاعتك
+  </h2>
+
+
+  <button
+    class="surprise-button"
+    id="surpriseButton"
+    type="button"
+  >
+    ♥ دوسي هنا
+  </button>
+
+</section>
+
+<!-- SURPRISE PHOTO -->
+<div id="birthdayPhotoModal" class="birthday-photo-modal">
+
+  <div class="birthday-photo-card">
+
+    <button id="closeBirthdayPhoto" class="birthday-photo-close">×</button>
+
+    <img src="img.n12.jpeg" alt="Our Photo">
+
+    <h2>Happy birthday Nadoshty 💛🫂</h2>
+
+  </div>
+
+</div>
+
+
+
+  <section class="story-page final-birthday">
+    <div class="final-card">
+      <h2>Happy Birthday<br><span id="finalName">Nadoshty
+      </span>.</h2>
+      
+
+<script src="script.js"></script>
+</body>
+</html>
